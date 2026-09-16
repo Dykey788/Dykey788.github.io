@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Ramo de Flores Animado</title>
+    <meta name="description" content="Un hermoso ramo de flores animado con efecto de apertura dinámico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Click burst container -->
+    <div id="clickBurstLayer"></div>
+
+    <div class="scene">
+        <h1 class="title">Para Ti</h1>
+        <p class="subtitle">Un ramo especial con todo mi cariño</p>
+
+        <div class="bouquet-wrapper">
+            <!-- Ribbon / Wrapping -->
+            <div class="ribbon">
+                <div class="ribbon-loop ribbon-loop-left"></div>
+                <div class="ribbon-loop ribbon-loop-right"></div>
+                <div class="ribbon-knot"></div>
+                <div class="ribbon-tail ribbon-tail-left"></div>
+                <div class="ribbon-tail ribbon-tail-right"></div>
+            </div>
+
+            <!-- Elegant Paper Wrapping -->
+            <div class="paper-wrap">
+                <!-- Back tissue layer -->
+                <div class="tissue-layer tissue-back"></div>
+
+                <!-- Main kraft paper -->
+                <div class="paper-fold paper-fold-left">
+                    <div class="paper-texture"></div>
+                    <div class="paper-gold-edge"></div>
+                </div>
+                <div class="paper-fold paper-fold-right">
+                    <div class="paper-texture"></div>
+                    <div class="paper-gold-edge"></div>
+                </div>
+
+                <!-- Front tissue peek -->
+                <div class="tissue-layer tissue-front-left"></div>
+                <div class="tissue-layer tissue-front-right"></div>
+
+                <!-- Decorative filigree on paper -->
+                <svg class="paper-filigree paper-filigree-left" viewBox="0 0 60 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M30 10 Q10 30 20 50 Q5 60 15 80 Q8 90 20 100 Q12 110 25 115" stroke="rgba(180,140,80,0.25)" stroke-width="1.2" fill="none"/>
+                    <path d="M35 15 Q15 35 25 55 Q10 65 20 85" stroke="rgba(180,140,80,0.15)" stroke-width="0.8" fill="none"/>
+                    <circle cx="20" cy="50" r="3" fill="rgba(180,140,80,0.15)"/>
+                    <circle cx="15" cy="80" r="2.5" fill="rgba(180,140,80,0.12)"/>
+                    <circle cx="25" cy="115" r="2" fill="rgba(180,140,80,0.1)"/>
+                </svg>
+                <svg class="paper-filigree paper-filigree-right" viewBox="0 0 60 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M30 10 Q50 30 40 50 Q55 60 45 80 Q52 90 40 100 Q48 110 35 115" stroke="rgba(180,140,80,0.25)" stroke-width="1.2" fill="none"/>
+                    <path d="M25 15 Q45 35 35 55 Q50 65 40 85" stroke="rgba(180,140,80,0.15)" stroke-width="0.8" fill="none"/>
+                    <circle cx="40" cy="50" r="3" fill="rgba(180,140,80,0.15)"/>
+                    <circle cx="45" cy="80" r="2.5" fill="rgba(180,140,80,0.12)"/>
+                    <circle cx="35" cy="115" r="2" fill="rgba(180,140,80,0.1)"/>
+                </svg>
+            </div>
+
+            <!-- Stems -->
+            <div class="stems-container">
+                <div class="stem stem-1"></div>
+                <div class="stem stem-2"></div>
+                <div class="stem stem-3"></div>
+                <div class="stem stem-4"></div>
+                <div class="stem stem-5"></div>
+                <div class="stem stem-6"></div>
+                <div class="stem stem-7"></div>
+            </div>
+
+            <!-- Leaves -->
+            <div class="leaves-container">
+                <div class="leaf leaf-1"></div>
+                <div class="leaf leaf-2"></div>
+                <div class="leaf leaf-3"></div>
+                <div class="leaf leaf-4"></div>
+                <div class="leaf leaf-5"></div>
+                <div class="leaf leaf-6"></div>
+            </div>
+
+            <!-- Flowers Container -->
+            <div class="flowers-container" id="flowersContainer">
+                <!-- Flowers are generated via JS -->
+            </div>
+
+            <!-- Small filler flowers / baby's breath -->
+            <div class="filler-container" id="fillerContainer">
+                <!-- Fillers generated via JS -->
+            </div>
+        </div>
+
+        <!-- Click hint -->
+        <p class="click-hint" id="clickHint">✨ Toca la pantalla para desparramar flores ✨</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
